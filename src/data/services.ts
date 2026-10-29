@@ -1,0 +1,66 @@
+export type Service = {
+  slug: string; name: string; published: boolean; short: string; full: string;
+  heroImage: string; gallery: string[]; applications: string[]; finishes: string[];
+  considerations: string[]; maintenance: string; faqs: { q: string; a: string }[];
+  related: string[]; seoTitle: string; seoDescription: string;
+};
+const note = "Performance depends on the coating system selected and on site conditions, so specifics are confirmed during assessment.";
+/** Set published:false to hide a service everywhere (nav, lists, sitemap, route returns 404). */
+export const services: Service[] = [
+  { slug: "garage-floor-coatings", name: "Garage Floor Coatings", published: true,
+    short: "Coatings that give a garage floor a clean, finished look.",
+    full: "A garage floor takes tyres, tools, spills and temperature swings. A coating system, applied over properly prepared concrete, gives the slab a uniform surface that is easier to sweep and wipe. We help you choose a finish that suits how the space is used. " + note,
+    heroImage: "", gallery: [], applications: ["Attached and detached residential garages", "Workshops and hobby spaces", "Carports and storage bays (where suitable)"],
+    finishes: ["Solid colour", "Decorative flake", "Metallic", "Gloss or matte topcoat, where the system allows"],
+    considerations: ["Existing cracks, joints and stains affect preparation", "Moisture in the slab should be assessed before coating", "Vehicles and storage need to be cleared from the area"],
+    maintenance: "Regular sweeping and cleaning with a mild, non-abrasive cleaner is typical. Follow the care guidance provided for your specific system.",
+    faqs: [{ q: "Can any garage floor be coated?", a: "Many can, but condition matters. Cracks, previous sealers and moisture all influence the approach, which is why an assessment comes first." }, { q: "Will the floor be slippery?", a: "Texture options vary by system. Tell us if traction matters and we will discuss what suits the space." }],
+    related: ["decorative-flake-flooring", "concrete-preparation-and-repair"], seoTitle: "Garage Floor Coatings", seoDescription: "Epoxy and coating systems for garage floors, applied over prepared concrete. Request an estimate from West Coast Epoxy Works." },
+  { slug: "decorative-flake-flooring", name: "Decorative Flake Flooring", published: true,
+    short: "A textured, multi-tone finish built from broadcast flakes.",
+    full: "Decorative flake systems scatter coloured flakes into a base coat, then seal the surface. The result is a speckled, textured finish that hides minor surface variation and can be matched to a colour scheme. " + note,
+    heroImage: "", gallery: [], applications: ["Garages and utility rooms", "Patios and covered entries (where suitable)", "Showrooms and light commercial spaces"],
+    finishes: ["Flake blends in a range of tones", "Full or partial flake coverage", "Clear topcoat in a chosen sheen"],
+    considerations: ["Flake size and density change the final texture", "A sample board helps judge colour in your lighting", "Preparation quality shows through the finished surface"],
+    maintenance: "Routine sweeping and damp mopping keeps the surface tidy. Avoid abrasive tools unless your installer advises otherwise.",
+    faqs: [{ q: "How do I choose a flake blend?", a: "Look at samples in the room where the floor will be, at different times of day. Light changes how blends read." }],
+    related: ["garage-floor-coatings", "metallic-epoxy-flooring"], seoTitle: "Decorative Flake Flooring", seoDescription: "Decorative flake epoxy flooring with a textured, multi-tone finish. Request an estimate from West Coast Epoxy Works." },
+  { slug: "metallic-epoxy-flooring", name: "Metallic Epoxy Flooring", published: true,
+    short: "Pigmented epoxy with depth, movement and a one-off pattern.",
+    full: "Metallic epoxy uses reflective pigments worked through the coating to create swirls and depth. No two floors are identical, so it suits spaces where the floor is a feature. " + note,
+    heroImage: "", gallery: [], applications: ["Living areas and basements", "Showrooms, retail and hospitality interiors", "Feature floors in offices and lobbies"],
+    finishes: ["Single or multi-colour pigment palettes", "Gloss or satin topcoat", "Subtle to dramatic movement"],
+    considerations: ["The pattern is hand-worked and varies from sample to sample", "Surface flatness affects how the finish reads", "Lighting strongly influences appearance"],
+    maintenance: "Gentle cleaning with a soft mop or cloth is usually recommended. Follow the guidance for your installed system.",
+    faqs: [{ q: "Can I get an exact match to a photo?", a: "A photo is a useful reference, but the finish is hand-worked, so expect a similar feel rather than a copy." }],
+    related: ["decorative-flake-flooring", "commercial-floor-coatings"], seoTitle: "Metallic Epoxy Flooring", seoDescription: "Metallic epoxy floors with depth and movement for homes and commercial interiors. Request an estimate from West Coast Epoxy Works." },
+  { slug: "commercial-floor-coatings", name: "Commercial Floor Coatings", published: true,
+    short: "Coated floors for businesses, with the use of the space in mind.",
+    full: "Commercial spaces ask more of a floor: foot traffic, trolleys, cleaning routines and downtime limits. We start by understanding how the space operates, then discuss systems that fit. " + note,
+    heroImage: "", gallery: [], applications: ["Retail and showrooms", "Offices and common areas", "Restaurants and food-service back-of-house (system suitability to be confirmed)", "Gyms and studios"],
+    finishes: ["Solid colour", "Flake", "Metallic", "Branded or zoned colour layouts"],
+    considerations: ["Work scheduling and access around trading hours", "Cleaning chemicals and equipment used on site", "Joints, drains and transitions between surfaces"],
+    maintenance: "Maintenance depends on the system and the site. A cleaning routine suited to your coating is agreed at handover.",
+    faqs: [{ q: "Can work happen outside trading hours?", a: "Scheduling is discussed per project. Tell us your constraints in the estimate request." }],
+    related: ["industrial-floor-coatings", "concrete-preparation-and-repair"], seoTitle: "Commercial Floor Coatings", seoDescription: "Commercial floor coating systems planned around how your space is used. Request an estimate from West Coast Epoxy Works." },
+  { slug: "industrial-floor-coatings", name: "Industrial Floor Coatings", published: true,
+    short: "Heavy-use floors assessed against the demands of the site.",
+    full: "Industrial floors may face impact, vehicle traffic, chemicals or temperature changes. Suitability varies widely by environment, so we treat these projects as assessment-led and do not assume one system fits every site. " + note,
+    heroImage: "", gallery: [], applications: ["Warehouses and storage", "Workshops and light manufacturing", "Loading and service areas (where suitable)"],
+    finishes: ["Solid colour", "Safety or zone marking colours", "Textured finishes, where required"],
+    considerations: ["Exposure to chemicals, heat or impact must be described up front", "Slab condition, joints and moisture are assessed first", "Downtime and phasing of areas"],
+    maintenance: "Cleaning and inspection routines depend on the environment and system, and are agreed per project.",
+    faqs: [{ q: "Will you recommend a system without seeing the site?", a: "No. Industrial suitability depends on conditions we need to review, so an assessment comes before any recommendation." }],
+    related: ["commercial-floor-coatings", "concrete-preparation-and-repair"], seoTitle: "Industrial Floor Coatings", seoDescription: "Assessment-led industrial floor coatings. Tell us about your site and request an estimate from West Coast Epoxy Works." },
+  { slug: "concrete-preparation-and-repair", name: "Concrete Preparation and Repair", published: true,
+    short: "Grinding, cleaning and repair so a coating has a sound base.",
+    full: "Preparation is the part of a coating job you do not see afterwards, and it shapes how the floor looks and performs. Preparation can include grinding or profiling the surface, removing old coatings, cleaning, and repairing cracks and damaged areas. The right method depends on the slab. " + note,
+    heroImage: "", gallery: [], applications: ["Before any coating installation", "Removing old or failing coatings", "Repairing cracks, spalls and uneven areas"],
+    finishes: ["Not a finish: this service prepares the surface for one"],
+    considerations: ["Dust control and access during grinding", "Slab age, condition and moisture", "Repairs may remain slightly visible under some finishes"],
+    maintenance: "Not applicable on its own. Care guidance applies to the coating installed afterwards.",
+    faqs: [{ q: "Is preparation really that important?", a: "Yes. A coating can only be as sound as the surface under it." }],
+    related: ["garage-floor-coatings", "industrial-floor-coatings"], seoTitle: "Concrete Preparation and Repair", seoDescription: "Concrete grinding, preparation and repair ahead of epoxy coatings. Request an estimate from West Coast Epoxy Works." },
+];
+export const live = () => services.filter((s) => s.published);
+export const bySlug = (slug: string) => live().find((s) => s.slug === slug);
